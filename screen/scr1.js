@@ -19,7 +19,9 @@ export default function App({navigation}) {
             }}>
                     <Text style={{textAlign: 'center', color: 'white'}}>Sign up</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{backgroundColor: '#FFF'}}>
+            <TouchableOpacity style={{backgroundColor: '#FFF'}} onPress={()=>{
+              navigation.navigate('Login');
+            }}>
                     <Text style={{textAlign: 'center'}}>Login</Text>
             </TouchableOpacity>
         </View>

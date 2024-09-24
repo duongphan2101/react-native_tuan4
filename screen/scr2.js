@@ -17,7 +17,9 @@ export default function App({navigation}) {
     console.log("Password: ", password);
     const data = {username, email, password};
     setUserData([...userData, data]);
-    console.log("Mang duoc luu: ", userData);
+    const newUser = [...userData, data];
+    console.log("Mang duoc luu 1: ", userData);
+    navigation.navigate('Login', {userData: newUser});
   }
 
   return (
