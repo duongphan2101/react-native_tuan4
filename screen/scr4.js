@@ -4,17 +4,12 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput} from 'react
 import { useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import CheckBox from 'expo-checkbox';
-export default function App({navigation}, userData) {
+export default function App({navigation}) {
     const [value, setvalue] = useState(2);
     const [img, setImg] = useState(require('../assets/DATA/Container73.png'));
     const [product, setProduct] = useState('Cake');
     const [price, setPrice] = useState(2.99);
     const [Total, setTotal] = useState(value * price);
-
-    const check = (userData) => {
-        console.log("user: " , userData);
-    }
-
     const prevValue = () => {
         setvalue(value > 0 ? value - 1 : 0);
     }
@@ -52,17 +47,17 @@ export default function App({navigation}, userData) {
             <Image style = {{width: '100%'}} source={img}/>
         </View>
         <View style={styles.style1}>
-            <TouchableOpacity onPress={ () => changeProduct(require('../assets/DATA/Image 7 (2).png'), 1)}>
+            <TouchableOpacity onPress={ () => changeProduct(require('../assets/DATA/Image72.png'), 1)}>
                 <Image source={require('../assets/DATA/Container72.png')}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => changeProduct(require('../assets/DATA/Image 7 (1).png'), 2)}>
+            <TouchableOpacity onPress={() => changeProduct(require('../assets/DATA/Image71.png'), 2)}>
                 <Image source={require('../assets/DATA/Container71.png')}/>
             </TouchableOpacity>
             <TouchableOpacity  onPress={() => changeProduct(require('../assets/DATA/Container73.png'), 3)}>
                 <Image source={require('../assets/DATA/Container74.png')}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => changeProduct(require('../assets/DATA/Image 7.png'), 4)}>
-                <Image source={require('../assets/DATA/Container 7.png')}/>
+            <TouchableOpacity onPress={() => changeProduct(require('../assets/DATA/Image7.png'), 4)}>
+                <Image source={require('../assets/DATA/Container7.png')}/>
             </TouchableOpacity>
         </View>
         <View style={styles.style3}>
@@ -75,7 +70,7 @@ export default function App({navigation}, userData) {
                 <Text style={{color: 'gray'}}>Occaecat est desernt tempor offici</Text>
             </View>
             <View style={{flexDirection: 'row'}}>
-                <Image source={require('../assets/DATA/Rating 3.png')}/>
+                <Image source={require('../assets/DATA/Rating3.png')}/>
                 <Text style={{fontSize: 16, fontWeight: 'bold', marginLeft: 5}}>4.5</Text>
             </View>
         </View>
